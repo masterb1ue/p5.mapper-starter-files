@@ -54,7 +54,7 @@ function setup() {
 
     //the mapping object
     //if you see "this", it refers to whatever we're assigning
-    pMapper = createProjectionMapper(this);
+    pMapper = createProjectionMapper(this);   
 
     //these help to crop and edit images projected
     //creates the 4 point map
