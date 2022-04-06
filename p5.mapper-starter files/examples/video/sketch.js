@@ -36,6 +36,13 @@ let imgGlitter;
     // Daniel
 let quadMapGlitter;
 
+//evi
+let toyota;
+let quadMapToyota;
+let building;
+let quadMapBuilding;
+
+
 
 //variable for video
 
