@@ -82,7 +82,7 @@ function setup() {
     //these help to crop and edit images projected
     //creates the 4 point map
     
-    
+    //jorge 
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
     quadMapTrain = pMapper.createQuadMap(600, 600);
 
@@ -90,8 +90,8 @@ function setup() {
     quadMapGlitter = pMapper.createQuadMap(imgGlitter.width, imgGlitter.height);
 
 
-//kathryn 
-    quadMapGateway = pMapper.createQuadMap(gateway2000.width, gatewat2000.height);
+    //kathryn 
+    quadMapGateway = pMapper.createQuadMap(gateway2000.width, gateway2000.height);
     quadMapDevo2001 = pMapper.createQuadMap(devo2001.width, devo2001.height);
 
     
