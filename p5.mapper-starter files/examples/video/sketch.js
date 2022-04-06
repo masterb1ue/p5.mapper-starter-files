@@ -104,9 +104,12 @@ function draw() {
     // quadMapThree.rect(-500, 350, 100, 50);
     // quadMapThree.rect(-600, 350, 100, 50);
     // quadMapThree.rect(-700, 350, 100, 50);
+
+    //jorge
     quadMapTrain.clear();
     quadMapTrain.translate(-quadMapTrain.width / 2, -quadMapTrain.height /2);   
     quadMapTrain.image(imgTrain, tMovement, -700);
+    quadMapConcept.image(img, -500, -500);
     
     // Daniel
     quadMapGlitter.image(imgGlitter, -500, -500);
