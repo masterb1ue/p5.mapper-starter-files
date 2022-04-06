@@ -89,6 +89,10 @@ function preload() {
 
     devo2001 = loadImage("assets/devo2001.jpg");
 
+    //evi
+    toyota = loadImage("assets/toyotaecho.jpg");
+    building = loadImage("assets/building.JPG");
+
     
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
@@ -118,11 +122,13 @@ function setup() {
     quadMapGateway = pMapper.createQuadMap(gateway2000.width, gateway2000.height);
     quadMapDevo2001 = pMapper.createQuadMap(devo2001.width, devo2001.height);
 
-    
-
-   
+    //natalie
     quadMaplips = pMapper.createQuadMap(lorlips.width, lorlips.height);
     quadMapproj3 = pMapper.createQuadMap(proj3.width, proj3.height);
+
+    //evi
+    quadMapToyota = pMapper.createQuadMap(600, 600);
+    quadMapBuilding = pMapper.createQuadMap(600, 600);
 
     //loads in the saved map
     pMapper.load("maps/map.json");
@@ -162,8 +168,13 @@ function draw() {
 
     tMovement+= 20;
 
+    //natalie
     quadMaplips.image(lorlips, -500,-500);
     quadMapproj3.image(proj3, -700,-700);
+
+    //evi
+    quadMapBuilding.image(building, 0, 0);
+    quadMapToyota.image(toyota, 0, 0);
     
     
     
