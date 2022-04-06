@@ -78,7 +78,7 @@ function setup() {
     quadMapTrain = pMapper.createQuadMap(600, 600);
 
     // Daniel
-    quadMapGlitter = pMapper.createQuadMap(img.width, img.height);
+    quadMapGlitter = pMapper.createQuadMap(imgGlitter.width, imgGlitter.height);
    
 
 
