@@ -10,6 +10,9 @@
 */
 
 // Natalie 
+
+
+
 // Kathryn
 
 // Daniel
@@ -25,6 +28,12 @@ let tMovement = -3500;
 let img;
 let imgTrain;
 
+let proj4;
+let proj3;
+let lorlips;
+let seventy;
+
+let quadMaplips;
 
 //variable for video
 
@@ -45,6 +54,16 @@ function preload() {
     img = loadImage("assets/KatherineConceptArtMagenta.jpeg");
     
     imgTrain = loadImage("assets/train.png");
+
+    proj4 = loadImage("assets/proj4.jpg");
+
+    proj3 = loadImage("assets/proj3.jpg");
+
+    lorlips = loadImage("assets/lorlips.PNG");
+
+    seventy = loadImage("assets/seventy.PNG");
+
+
     
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
@@ -66,7 +85,8 @@ function setup() {
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
     quadMapTrain = pMapper.createQuadMap(600, 600);
    
-
+    quadMaplips = pMapper.createQuadMap(lorlips.width, lorlips.height);
+    quadMapproj3 = pMapper.createQuadMap(proj3.width, proj3.height);
 
     //loads in the saved map
     pMapper.load("maps/map.json");
@@ -96,7 +116,8 @@ function draw() {
     
     tMovement+= 20;
 
-    
+    quadMaplips.image(lorlips, -500,-500);
+    quadMapproj3.image(proj3, -700,-700);
     
     
     
