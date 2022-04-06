@@ -10,11 +10,6 @@
 */
 
 // Natalie 
-
-
-
-// Kathryn
-
 // Daniel
 //mapping object variable
 let pMapper;   
@@ -24,9 +19,13 @@ let quadMapOne;
 let quadMapThree;
 let tMovement = -3500;
 
+    // Daniel
+let quadMapGlitter;
+
 //variable for the image
 let img;
 let imgTrain;
+
 
 let proj4;
 let proj3;
@@ -34,6 +33,11 @@ let lorlips;
 let seventy;
 
 let quadMaplips;
+
+   // Daniel
+let imgGlitter;
+
+
 
 //variable for video
 
@@ -53,7 +57,9 @@ let trainMove = -400;
 function preload() {
     img = loadImage("assets/KatherineConceptArtMagenta.jpeg");
     
+    
     imgTrain = loadImage("assets/train.png");
+
 
     proj4 = loadImage("assets/proj4.jpg");
 
@@ -62,6 +68,10 @@ function preload() {
     lorlips = loadImage("assets/lorlips.PNG");
 
     seventy = loadImage("assets/seventy.PNG");
+
+
+    // Daniel
+    imgGlitter = loadImage("assets/IntelPentilliumIII.png");
 
 
     
@@ -84,6 +94,9 @@ function setup() {
     
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
     quadMapTrain = pMapper.createQuadMap(600, 600);
+
+    // Daniel
+    quadMapGlitter = pMapper.createQuadMap(img.width, img.height);
    
     quadMaplips = pMapper.createQuadMap(lorlips.width, lorlips.height);
     quadMapproj3 = pMapper.createQuadMap(proj3.width, proj3.height);
@@ -110,10 +123,16 @@ function draw() {
     // quadMapThree.rect(-500, 350, 100, 50);
     // quadMapThree.rect(-600, 350, 100, 50);
     // quadMapThree.rect(-700, 350, 100, 50);
+
+    //jorge
     quadMapTrain.clear();
     quadMapTrain.translate(-quadMapTrain.width / 2, -quadMapTrain.height /2);   
     quadMapTrain.image(imgTrain, tMovement, -700);
+    quadMapConcept.image(img, -500, -500);
     
+    // Daniel
+    quadMapGlitter.image(imgGlitter, -500, -500);
+
     tMovement+= 20;
 
     quadMaplips.image(lorlips, -500,-500);
