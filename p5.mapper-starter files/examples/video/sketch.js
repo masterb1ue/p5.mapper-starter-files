@@ -14,10 +14,14 @@
 // Evi
 // Daniel
 //mapping object variable
-let pMapper;   
+let pMapper;
+let revlonLipstick;   
 
 //mapping surface variables
 let quadMapConcept;
+let quadMapRevlonLipstick;
+
+
 let tMovement = -3500;
 
 //variable for the image
@@ -43,6 +47,7 @@ let trainMove = -400;
 //calls from our assets folder
 function preload() {
     img = loadImage("assets/KatherineConceptArtMagenta.jpeg");
+    revlonLipstick = loadImage("assets/Revlon 'Moon Drops' Lipstick Commercial.png");
     
     
     imgTrain = loadImage("assets/train.png");
@@ -67,8 +72,10 @@ function setup() {
     
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
     
-    
     quadMapTrain = pMapper.createQuadMap(600, 600);
+
+    quadMapRevlonLipstick = pMapper.createQuadMap(img.width,img.height);
+
    
 
 
