@@ -14,11 +14,14 @@
 // Evi
 // Daniel
 //mapping object variable
-let pMapper;   
+let pMapper;
+let revlonLipstick;   
 
 //mapping surface variables
-let quadMapOne;
-let quadMapThree;
+let quadMapConcept;
+let quadMapRevlonLipstick;
+
+
 let tMovement = -3500;
 
 let quadmaptoyota;
@@ -26,6 +29,7 @@ let quadmaptoyota;
 //variable for the image
 let img;
 let imgTrain;
+let citySound;
 
 let toyota;
 
@@ -47,9 +51,16 @@ let trainMove = -400;
 //calls from our assets folder
 function preload() {
     img = loadImage("assets/KatherineConceptArtMagenta.jpeg");
+    revlonLipstick = loadImage("assets/Revlon 'Moon Drops' Lipstick Commercial.png");
+    
     
     imgTrain = loadImage("assets/train.png");
+<<<<<<< HEAD
     toyota = loadImage("assets/toyotaecho.jpg");
+=======
+    citySound = loadSound
+    
+>>>>>>> f611d5f841ae49cd04b587eee48058f972a75837
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
 }
@@ -68,8 +79,16 @@ function setup() {
     
     
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
+    
     quadMapTrain = pMapper.createQuadMap(600, 600);
+<<<<<<< HEAD
     quadmaptoyota = pMapper.createQuadMap(toyotaecho.width,toyotaecho.height)
+=======
+
+    quadMapRevlonLipstick = pMapper.createQuadMap(img.width,img.height);
+
+   
+>>>>>>> f611d5f841ae49cd04b587eee48058f972a75837
 
 
     //loads in the saved map
@@ -85,6 +104,7 @@ function draw() {
     //the frame rate at the top left
     displayFrameRate();
     
+    
 
 
 
@@ -94,10 +114,14 @@ function draw() {
     // quadMapThree.rect(-500, 350, 100, 50);
     // quadMapThree.rect(-600, 350, 100, 50);
     // quadMapThree.rect(-700, 350, 100, 50);
+    
     quadMapTrain.clear();
+    
+
     quadMapTrain.translate(-quadMapTrain.width / 2, -quadMapTrain.height /2);   
     quadMapTrain.image(imgTrain, tMovement, -700);
-    
+    quadMapConcept.image(img, -500, -300);
+    quadMapRevlonLipstick.image(revlonLipstick,-500,-500);
     tMovement+= 20;
     quadmaptoyota.image(toyotaecho, 0, 0);
     
@@ -108,7 +132,7 @@ function draw() {
     if(tMovement > 600){
        tMovement = -5000;
         //sets concept art to quadmap
-       quadMapConcept.image(img, 100, 100);
+       
     }
 }
 
