@@ -17,13 +17,13 @@
 let pMapper;   
 
 //mapping surface variables
-let quadMapOne;
-let quadMapThree;
+let quadMapConcept;
 let tMovement = -3500;
 
 //variable for the image
 let img;
 let imgTrain;
+let citySound;
 
 
 //variable for video
@@ -44,7 +44,9 @@ let trainMove = -400;
 function preload() {
     img = loadImage("assets/KatherineConceptArtMagenta.jpeg");
     
+    
     imgTrain = loadImage("assets/train.png");
+    citySound = loadSound
     
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
@@ -64,6 +66,8 @@ function setup() {
     
     
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
+    
+    
     quadMapTrain = pMapper.createQuadMap(600, 600);
    
 
@@ -81,6 +85,7 @@ function draw() {
     //the frame rate at the top left
     displayFrameRate();
     
+    
 
 
 
@@ -90,10 +95,13 @@ function draw() {
     // quadMapThree.rect(-500, 350, 100, 50);
     // quadMapThree.rect(-600, 350, 100, 50);
     // quadMapThree.rect(-700, 350, 100, 50);
+    
     quadMapTrain.clear();
+    
+
     quadMapTrain.translate(-quadMapTrain.width / 2, -quadMapTrain.height /2);   
     quadMapTrain.image(imgTrain, tMovement, -700);
-    
+    quadMapConcept.image(img, -500, -300);
     tMovement+= 20;
 
     
@@ -104,7 +112,7 @@ function draw() {
     if(tMovement > 600){
        tMovement = -5000;
         //sets concept art to quadmap
-       quadMapConcept.image(img, 100, 100);
+       
     }
 }
 
