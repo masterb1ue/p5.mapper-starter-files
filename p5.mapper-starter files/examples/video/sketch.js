@@ -14,24 +14,22 @@
 // Evi
 // Daniel
 //mapping object variable
-let pMapper;
-let revlonLipstick;   
+let pMapper;   
 
 //mapping surface variables
-let quadMapConcept;
-let quadMapRevlonLipstick;
-
-
+let quadMapOne;
+let quadMapThree;
 let tMovement = -3500;
 
-let quadmaptoyota;
+    // Daniel
+let quadMapGlitter;
 
 //variable for the image
 let img;
 let imgTrain;
-let citySound;
 
-let toyota;
+   // Daniel
+let imgGlitter;
 
 
 //variable for video
@@ -51,14 +49,13 @@ let trainMove = -400;
 //calls from our assets folder
 function preload() {
     img = loadImage("assets/KatherineConceptArtMagenta.jpeg");
-    revlonLipstick = loadImage("assets/Revlon 'Moon Drops' Lipstick Commercial.png");
-    
     
     imgTrain = loadImage("assets/train.png");
 
-    toyota = loadImage("assets/toyotaecho.jpg");
+    // Daniel
+    imgGlitter = loadImage(assets/intel pentillum III.png);
 
-
+    
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
 }
@@ -77,16 +74,11 @@ function setup() {
     
     
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
-    
     quadMapTrain = pMapper.createQuadMap(600, 600);
 
-    
-    quadmaptoyota = pMapper.createQuadMap(img.width,img.height);
-
-    quadMapRevlonLipstick = pMapper.createQuadMap(img.width,img.height);
-
+    // Daniel
+    quadMapGlitter = pMapper.createQuadMap(img.width, img.height);
    
-
 
 
     //loads in the saved map
@@ -102,7 +94,6 @@ function draw() {
     //the frame rate at the top left
     displayFrameRate();
     
-    
 
 
 
@@ -112,16 +103,15 @@ function draw() {
     // quadMapThree.rect(-500, 350, 100, 50);
     // quadMapThree.rect(-600, 350, 100, 50);
     // quadMapThree.rect(-700, 350, 100, 50);
-    
     quadMapTrain.clear();
-    
-
     quadMapTrain.translate(-quadMapTrain.width / 2, -quadMapTrain.height /2);   
     quadMapTrain.image(imgTrain, tMovement, -700);
-    quadMapConcept.image(img, -500, -300);
-    quadMapRevlonLipstick.image(revlonLipstick,-500,-500);
+    
+    // Daniel
+    quadMapGlitter.image(imgGlitter, -500, -500);
+
     tMovement+= 20;
-    quadmaptoyota.image(toyotaecho, 0, 0);
+
     
     
     
@@ -130,7 +120,7 @@ function draw() {
     if(tMovement > 600){
        tMovement = -5000;
         //sets concept art to quadmap
-       
+       quadMapConcept.image(img, 100, 100);
     }
 }
 
