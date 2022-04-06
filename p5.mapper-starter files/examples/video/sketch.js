@@ -87,10 +87,15 @@ function setup() {
     quadMapTrain = pMapper.createQuadMap(600, 600);
 
     // Daniel
-    quadMapGlitter = pMapper.createQuadMap(img.width, img.height);
+    quadMapGlitter = pMapper.createQuadMap(imgGlitter.width, imgGlitter.height);
 
+
+//kathryn 
     quadMapGateway = pMapper.createQuadMap(gateway2000.width, gatewat2000.height);
     quadMapDevo2001 = pMapper.createQuadMap(devo2001.width, devo2001.height);
+
+    
+
    
 
 
