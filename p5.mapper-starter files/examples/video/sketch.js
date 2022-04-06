@@ -10,8 +10,6 @@
 */
 
 // Natalie 
-// Kathryn --- test test 
-// Evi
 // Daniel
 //mapping object variable
 let pMapper;   
@@ -31,6 +29,14 @@ let quadMapDevo2001;
 let img;
 let imgTrain;
 
+
+let proj4;
+let proj3;
+let lorlips;
+let seventy;
+
+let quadMaplips;
+
    // Daniel
 let imgGlitter;
     // Daniel
@@ -41,6 +47,7 @@ let toyota;
 let quadMapToyota;
 let building;
 let quadMapBuilding;
+
 
 
 
@@ -64,6 +71,16 @@ function preload() {
     
     
     imgTrain = loadImage("assets/train.png");
+
+
+    proj4 = loadImage("assets/proj4.jpg");
+
+    proj3 = loadImage("assets/proj3.jpg");
+
+    lorlips = loadImage("assets/lorlips.PNG");
+
+    seventy = loadImage("assets/seventy.PNG");
+
 
     // Daniel
     imgGlitter = loadImage("assets/IntelPentilliumIII.png");
@@ -104,7 +121,8 @@ function setup() {
     
 
    
-
+    quadMaplips = pMapper.createQuadMap(lorlips.width, lorlips.height);
+    quadMapproj3 = pMapper.createQuadMap(proj3.width, proj3.height);
 
     //loads in the saved map
     pMapper.load("maps/map.json");
@@ -144,7 +162,8 @@ function draw() {
 
     tMovement+= 20;
 
-    
+    quadMaplips.image(lorlips, -500,-500);
+    quadMapproj3.image(proj3, -700,-700);
     
     
     
