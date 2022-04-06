@@ -21,15 +21,20 @@ let quadMapOne;
 let quadMapThree;
 let tMovement = -3500;
 
-    // Daniel
-let quadMapGlitter;
+//kathyrn
+let gateway2000;
+let devo2001;
+let quadMapGateway;
+let quadMapDevo2001;
 
-//variable for the image
+//jorge
 let img;
 let imgTrain;
 
    // Daniel
 let imgGlitter;
+    // Daniel
+let quadMapGlitter;
 
 
 //variable for video
@@ -56,6 +61,10 @@ function preload() {
     // Daniel
     imgGlitter = loadImage("assets/IntelPentilliumIII.png");
 
+    gateway2000 = loadImage("assets/gateway2000.jpg");
+
+    devo2001 = loadImage("assets/devo2001.jpg");
+
     
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
@@ -79,6 +88,9 @@ function setup() {
 
     // Daniel
     quadMapGlitter = pMapper.createQuadMap(img.width, img.height);
+
+    quadMapGateway = pMapper.createQuadMap(gateway2000.width, gatewat2000.height);
+    quadMapDevo2001 = pMapper.createQuadMap(devo2001.width, devo2001.height);
    
 
 
@@ -113,6 +125,10 @@ function draw() {
     
     // Daniel
     quadMapGlitter.image(imgGlitter, -500, -500);
+
+    //kathryn
+    quadMapDevo2001.image(devo2001, -750, -520);
+    quadMapGateway.image(gateway2000, -700, -500);
 
     tMovement+= 20;
 
