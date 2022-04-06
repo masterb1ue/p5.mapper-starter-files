@@ -24,10 +24,14 @@ let quadMapRevlonLipstick;
 
 let tMovement = -3500;
 
+let quadmaptoyota;
+
 //variable for the image
 let img;
 let imgTrain;
 let citySound;
+
+let toyota;
 
 
 //variable for video
@@ -52,8 +56,10 @@ function preload() {
     
     
     imgTrain = loadImage("assets/train.png");
-    citySound = loadSound
-    
+
+    toyota = loadImage("assets/toyotaecho.jpg");
+
+
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
 }
@@ -75,9 +81,13 @@ function setup() {
     
     quadMapTrain = pMapper.createQuadMap(600, 600);
 
+    
+    quadmaptoyota = pMapper.createQuadMap(img.width,img.height);
+
     quadMapRevlonLipstick = pMapper.createQuadMap(img.width,img.height);
 
    
+
 
 
     //loads in the saved map
@@ -112,7 +122,7 @@ function draw() {
     quadMapConcept.image(img, -500, -300);
     quadMapRevlonLipstick.image(revlonLipstick,-500,-500);
     tMovement+= 20;
-
+    quadmaptoyota.image(toyotaecho, 0, 0);
     
     
     
