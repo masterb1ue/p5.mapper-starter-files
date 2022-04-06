@@ -19,10 +19,13 @@ let quadMapOne;
 let quadMapThree;
 let tMovement = -3500;
 
-    // Daniel
-let quadMapGlitter;
+//kathyrn
+let gateway2000;
+let devo2001;
+let quadMapGateway;
+let quadMapDevo2001;
 
-//variable for the image
+//jorge
 let img;
 let imgTrain;
 
@@ -36,6 +39,8 @@ let quadMaplips;
 
    // Daniel
 let imgGlitter;
+    // Daniel
+let quadMapGlitter;
 
 
 
@@ -73,6 +78,9 @@ function preload() {
     // Daniel
     imgGlitter = loadImage("assets/IntelPentilliumIII.png");
 
+    gateway2000 = loadImage("assets/gateway2000.jpg");
+
+    devo2001 = loadImage("assets/devo2001.jpg");
 
     
     
@@ -91,12 +99,20 @@ function setup() {
     //these help to crop and edit images projected
     //creates the 4 point map
     
-    
+    //jorge 
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
     quadMapTrain = pMapper.createQuadMap(600, 600);
 
     // Daniel
-    quadMapGlitter = pMapper.createQuadMap(img.width, img.height);
+    quadMapGlitter = pMapper.createQuadMap(imgGlitter.width, imgGlitter.height);
+
+
+    //kathryn 
+    quadMapGateway = pMapper.createQuadMap(gateway2000.width, gateway2000.height);
+    quadMapDevo2001 = pMapper.createQuadMap(devo2001.width, devo2001.height);
+
+    
+
    
     quadMaplips = pMapper.createQuadMap(lorlips.width, lorlips.height);
     quadMapproj3 = pMapper.createQuadMap(proj3.width, proj3.height);
@@ -132,6 +148,10 @@ function draw() {
     
     // Daniel
     quadMapGlitter.image(imgGlitter, -500, -500);
+
+    //kathryn
+    quadMapDevo2001.image(devo2001, -750, -520);
+    quadMapGateway.image(gateway2000, -700, -500);
 
     tMovement+= 20;
 
