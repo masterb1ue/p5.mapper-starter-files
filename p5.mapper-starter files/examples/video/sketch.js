@@ -55,12 +55,10 @@ function preload() {
     
     
     imgTrain = loadImage("assets/train.png");
-<<<<<<< HEAD
+
     toyota = loadImage("assets/toyotaecho.jpg");
-=======
-    citySound = loadSound
-    
->>>>>>> f611d5f841ae49cd04b587eee48058f972a75837
+
+
     
     // we need this bc we dont want our video to show anywhere else but inside a masking surface
 }
@@ -81,14 +79,14 @@ function setup() {
     quadMapConcept = pMapper.createQuadMap(img.width,img.height);
     
     quadMapTrain = pMapper.createQuadMap(600, 600);
-<<<<<<< HEAD
-    quadmaptoyota = pMapper.createQuadMap(toyotaecho.width,toyotaecho.height)
-=======
+
+    
+    quadmaptoyota = pMapper.createQuadMap(img.width,img.height);
 
     quadMapRevlonLipstick = pMapper.createQuadMap(img.width,img.height);
 
    
->>>>>>> f611d5f841ae49cd04b587eee48058f972a75837
+
 
 
     //loads in the saved map
