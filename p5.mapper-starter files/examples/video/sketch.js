@@ -50,6 +50,7 @@ function preload() {
     revlonLipstick = loadImage("assets/Revlon 'Moon Drops' Lipstick Commercial.png");
     
     
+    
     imgTrain = loadImage("assets/train.png");
     citySound = loadSound
     
