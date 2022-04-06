@@ -50,6 +50,7 @@ let trainMove = -400;
 function preload() {
     img = loadImage("assets/KatherineConceptArtMagenta.jpeg");
     
+    
     imgTrain = loadImage("assets/train.png");
 
     // Daniel
