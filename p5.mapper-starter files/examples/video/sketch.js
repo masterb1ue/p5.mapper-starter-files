@@ -54,7 +54,7 @@ function preload() {
     imgTrain = loadImage("assets/train.png");
 
     // Daniel
-    imgGlitter = loadImage("assets/IntelPentillumIII.png");
+    imgGlitter = loadImage("assets/IntelPentilliumIII.png");
 
     
     
