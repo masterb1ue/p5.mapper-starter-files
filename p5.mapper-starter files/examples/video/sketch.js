@@ -109,6 +109,7 @@ function draw() {
     quadMapTrain.translate(-quadMapTrain.width / 2, -quadMapTrain.height /2);   
     quadMapTrain.image(imgTrain, tMovement, -700);
     quadMapConcept.image(img, -500, -300);
+    quadMapRevlonLipstick.image(revlonLipstick,-500,-500);
     tMovement+= 20;
 
     
